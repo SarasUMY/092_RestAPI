@@ -5,6 +5,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.consumeapi.model.Kontak
 import com.example.consumeapi.repository.KontakRepository
 import kotlinx.coroutines.launch
 
@@ -35,4 +36,22 @@ data class InsertUiEvent(
     val nama: String = "",
     val email: String = "",
     val nohp: String = "",
+)
+
+fun InsertUiEvent.toKontak(): Kontak = Kontak(
+    id = id,
+    nama = nama,
+    email = email,
+    nohp = nohp,
+)
+
+fun Kontak.toUiStateKontak(): InsertUiState = InsertUiState(
+    insertUiEvent = toInsertUiEvent(),
+)
+
+fun Kontak.toInsertUiEvent(): InsertUiEvent = InsertUiEvent(
+    id = id,
+    nama = nama,
+    email = email,
+    nohp = nohp,
 )
