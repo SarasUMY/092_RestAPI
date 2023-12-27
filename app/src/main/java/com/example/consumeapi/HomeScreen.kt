@@ -16,6 +16,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.consumeapi.ui.PenyediaViewModel
+import com.example.consumeapi.ui.home.screen.HomeStatus
 import com.example.consumeapi.ui.home.viewmodel.HomeViewModel
 
 object DestinasiHome : DestinasiNavigasi {
@@ -54,7 +55,16 @@ fun HomeScreen(
                 )
             }
         }
-    ) {
-
+    ) {innerPadding ->
+        HomeStatus(
+            kontakUIState = viewModel.kontakUIState,
+            retryAction = { viewModel.getKontak() },
+            modifier = Modifier.padding(innerPadding),
+            onDetailClick = onDetailClick,
+            onDeleteClick = {
+                viewModel.deleteKontak(it.id)
+                viewModel.getKontak()
+            }
+        )
     }
 }
