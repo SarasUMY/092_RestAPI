@@ -18,6 +18,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.consumeapi.ui.PenyediaViewModel
 import com.example.consumeapi.ui.home.screen.HomeStatus
 import com.example.consumeapi.ui.home.viewmodel.HomeViewModel
+import com.example.consumeapi.ui.theme.TopAppBarKontak
 
 object DestinasiHome : DestinasiNavigasi {
     override val route = "home"

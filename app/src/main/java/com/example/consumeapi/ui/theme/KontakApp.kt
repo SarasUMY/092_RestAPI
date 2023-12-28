@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.consumeapi.HomeScreen
 import com.example.consumeapi.R
 import com.example.consumeapi.ui.PenyediaViewModel
 import com.example.consumeapi.ui.home.screen.HomeScreen
@@ -40,17 +41,14 @@ fun KontakApp(
                 .fillMaxSize()
                 .padding(it)
         ) {
-            HomeScreen(
-                kontakUIState = homeViewModel.kontakUIState,
-                retryAction = homeViewModel::getKontak
-            )
+            Pengelo
         }
     }
 }
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun ToAppBarKontak(
+fun TopAppBarKontak(
     title: String,
     canNavigateBack: Boolean,
     modifier: Modifier = Modifier,
