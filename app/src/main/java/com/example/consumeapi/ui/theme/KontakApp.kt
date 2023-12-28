@@ -22,8 +22,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.consumeapi.HomeScreen
 import com.example.consumeapi.R
+import com.example.consumeapi.navigation.PengelolaHalaman
 import com.example.consumeapi.ui.PenyediaViewModel
-import com.example.consumeapi.ui.home.screen.HomeScreen
 import com.example.consumeapi.ui.home.viewmodel.HomeViewModel
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -41,7 +41,7 @@ fun KontakApp(
                 .fillMaxSize()
                 .padding(it)
         ) {
-            Pengelo
+            PengelolaHalaman()
         }
     }
 }
